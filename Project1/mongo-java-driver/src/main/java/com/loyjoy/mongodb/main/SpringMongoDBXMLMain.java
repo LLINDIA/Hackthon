@@ -4,7 +4,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.loyjoy.mongodb.dao.User;
 import com.loyjoy.mongodb.dao.UserDAO;
-import com.loyjoy.mongodb.dao.UserDAOImpl;
 
 public class SpringMongoDBXMLMain {
 
@@ -12,7 +11,7 @@ public class SpringMongoDBXMLMain {
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
 		User usr = ctx.getBean("userDAO", User.class);
 		UserDAO usrDAO = new UserDAO(null, "Tejas", "P", "tejas.p@gmail.com");
-
+		// heelo
 		// Create Record
 		usr.create(usrDAO);
 		System.out.println("Record Created successfully");
