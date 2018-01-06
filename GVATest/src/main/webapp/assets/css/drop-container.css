@@ -11,9 +11,9 @@ body {
   bottom: 0;
   right: 0;
   background: radial-gradient(ellipse at center, #EB6A5A 0, #c9402f 100%);
-  width: 80%;
+  width: 30%;
   height: 50%;
-  border: 5px dashed white;
+  border: 3px dashed white;
   text-align: center;
   color: white;
   z-index: 20;

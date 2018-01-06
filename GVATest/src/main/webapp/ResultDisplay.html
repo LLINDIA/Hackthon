@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Source Sans Pro;
+}
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>ERRORISTS OTS SOLUTION</h1>
+<hr>
+
+<h2>Recommendations</h2>
+<p>Similar Images</p>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="2.jpg" id="similar1"  alt="similar1" style="width:100%">
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="3.jpg" id="similar2"  alt="similar2" style="width:100%">
+      </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="4.jpg" id="similar3"  alt="similar3" style="width:100%">
+     </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="4.jpg" id="similar4" alt="similar4" style="width:100%">
+      </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<div class="content">
+  <img src="1.jpg" id="original"  alt="original" style="width:100%">
+  <h3>Description</h3>
+  <p id="descPart1">The Bajaj Pulsar 180 is Bajaj once again playing the middle game. It tries to offer a balance for people looking for combined traits of a 200 or a 150cc bike. The commuter seating position, and comfortable seat further strengthen the 180’s case. The Bajaj Pulsar 180 also gets a larger disc, and wider rear tires over the 150 to make use of all that power..</p>
+  <p id="descPart2"></p>
+</div>
+
+<!-- END MAIN -->
+</div>
+
+</body>
+</html>
