@@ -2,16 +2,38 @@ package com.loyjoy.mongodb.main;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.loyjoy.mongodb.dao.User;
-import com.loyjoy.mongodb.dao.UserDAO;
+import com.loyjoy.mongodb.dao.Products;
+import com.loyjoy.mongodb.dao.ProductDAO;
 
 public class SpringMongoDBXMLMain {
 
 	public static void main(String[] args) {
+		SpringMongoDBXMLMain obj = new SpringMongoDBXMLMain();
+		
+		obj.getProduct();
+	}
+
+	private void getProduct() {
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
+		Products product = ctx.getBean("ProductDAO", Products.class);
+		ProductDAO dao = product.readById("");
+		/*List<String> keywords = new ArrayList<String>();
+		keywords.add("camera");
+		String output = productDAO.getKeyword();*/
+//		for(Product p : output) {
+//			System.out.println(p.toString());
+//		}
+		System.out.println(dao);
+		System.out.println(dao.getDescription());
+		ctx.close();
+	}
+}
+	
+	/*private void testUser() {
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
 		User usr = ctx.getBean("userDAO", User.class);
 		UserDAO usrDAO = new UserDAO(null, "Tejas", "P", "tejas.p@gmail.com");
-
+		// heelo
 		// Create Record
 		usr.create(usrDAO);
 		System.out.println("Record Created successfully");
@@ -30,10 +52,7 @@ public class SpringMongoDBXMLMain {
 
 		UserDAO user = usr.readById(usrDAO1.getId());
 
-		System.out.println("Retrived the User data after Update :" + user);
+		System.out.println("Retrived the User data after Update :" + user);*/
 
-		ctx.close();
+	
 
-	}
-
-}

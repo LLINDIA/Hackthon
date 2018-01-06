@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.query.Query;
 public class UserDAOImpl implements User {
 
 	private MongoOperations mongoOps;
-	private static final String COLLECTION_NAME = "usr_user";
+	private static final String COLLECTION_NAME = "Images.files";
 
 	public UserDAOImpl(MongoOperations mongoOps) {
 		this.mongoOps = mongoOps;

@@ -7,14 +7,14 @@
 		http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.5.xsd">
 
 	<mongo:mongo host="172.30.1.18" port="27017" id="mongo" />
-	<mongo:db-factory dbname="local_dump" mongo-ref="mongo"
+	<mongo:db-factory dbname="Hackthon" mongo-ref="mongo"
 		id="mongoDbFactory" />
 
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
 	</bean>
 
-	<bean id="userDAO" class="com.loyjoy.mongodb.dao.UserDAOImpl">
+	<bean id="ProductDAO" class="com.loyjoy.mongodb.dao.ProductDAOImpl">
 		<constructor-arg name="mongoOps" ref="mongoTemplate" />
 	</bean>
 </beans>
